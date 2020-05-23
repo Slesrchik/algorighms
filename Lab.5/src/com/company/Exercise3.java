@@ -11,27 +11,16 @@ public class Exercise3 {
 
 
     boolean isBipartite(int G[][], int src) {
-         //create the array to store colors
-
+       //create the array to store colors
        //all vertices are marked by colors
-
-
-
-        // the number of the vertex is used as an iterator
-
-        // value «-1»
-
-        // of colorArr [i] is used to show
-
-        //  that color is not used
-
-        // for the vertex 'i'. Value 1
-
-        //  is used to mark the first color
-
-        // used  and value 0 shows
-
-        // that the second color is used
+       // the number of the vertex is used as an iterator
+       // value «-1»
+       // of colorArr [i] is used to show
+       //  that color is not used
+       // for the vertex 'i'. Value 1
+       //  is used to mark the first color
+       // used  and value 0 shows
+       // that the second color is used
 
         int colorArr[] = new int[V];
 
@@ -40,21 +29,21 @@ public class Exercise3 {
             colorArr[i] = -1;
 
 
-        // mark the source with the first color
+       // mark the source with the first color
 
         colorArr[src] = 1;
 
 
-        // create queue (FIFO) of vertices number
+       // create queue (FIFO) of vertices number
 
-        // и ставим исходную вершину в очередь для обхода BFS
+       //and queue the original vertex to bypass the BFS
 
         LinkedList<Integer> q = new LinkedList<Integer>();
 
         q.add(src);
 
 
-        // Выполнить при наличии вершин в очереди (аналогично BFS)
+        //Run when there are vertices in the queue (similar to BFS)
 
         while (q.size() != 0) {
 
@@ -80,7 +69,7 @@ public class Exercise3 {
 
                 if (G[u][v] == 1 && colorArr[v] == -1) {
 
-                    // Назначаем альтернативный цвет этому смежному v из вас
+                    // Assign an alternate color to this adjacent v of you
 
                     colorArr[v] = 1 - colorArr[u];
 
