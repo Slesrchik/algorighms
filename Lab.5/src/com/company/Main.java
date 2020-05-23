@@ -30,7 +30,7 @@ public class Main {
 //            out.flush();
 
        Scanner in = new Scanner(System.in);
-        //Exercise 3 (Construct and implement an algorithm that checks whether the input graph is bipartite.)
+        //Construct and implement an algorithm that checks whether the input graph is bipartite. #3
         int G[][] = new int[4][4];
 
 
@@ -51,7 +51,7 @@ public class Main {
 
             System.out.println("It is not a bipartite graph");
         }
-        // Exercise 2 (Construct and implement an algorithm that checks if there exists a cycle in this undirected graph)
+        //Construct and implement an algorithm that checks if there exists a cycle in this undirected graph. #2
 
 //        Cycle g1 = new Cycle(5);
 //        g1.addEdge(1, 0);
